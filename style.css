@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+nav {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  background-color: rgb(62, 150, 250);
+  padding: 10px;
+}
+
+nav .navLogo {
+  display: flex;
+  align-items: center;
+}
+
+nav .navLogo h1 {
+  font-weight: 800;
+  color: aliceblue;
+}
+
+nav .navLogo img {
+  height: 60px;
+  width: 40px;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+.Link {
+  margin-right: 10px;
+}
+
+input {
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  border: none;
+}
+
+li {
+  list-style: none;
+  display: inline;
+  margin-right: 10px;
+  font-weight: 200;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: black;
+}
+
+.product1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.product1 img {
+  height: 300px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.product1 button {
+  background-color: rgba(173, 173, 173, 0.575);
+  border-radius: 10px;
+  padding: 15px 35px;
+  margin-top: 20px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.product1 button:hover{
+  color: black;
+  background-color: yellow;
+}
+
+h1,
+h3 {
+  text-align: center;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+.productContent h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.product-images img {
+  height: 300px;
+  width: 100%;
+  max-width: 200px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.product-images h2 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.product-images p {
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: red;
+}
+
+.product-images p span {
+  background-color: red;
+  color: black;
+  padding: 5px;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+
+.product-grid {
+  text-align: center;
+  padding: 10px;
+}
+
+.product-images button {
+  background-color: rgba(173, 173, 173, 0.575);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.product-images button:hover {
+  cursor: pointer;
+  background-color: rgb(255, 217, 0);
+  color: black;
+  transition-duration: 500ms;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.product-grid img:hover {
+  transform: scale(1.1);
+}
+
+.info {
+  background-color: gray;
+  text-align: center;
+  padding: 10px;
+  margin-top: 80px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .navLogo h1 {
+    font-size: 24px;
+  }
+
+  .product1 img {
+    max-width: 100%;
+  }
+
+  .productContent h1 {
+    font-size: 24px;
+  }
+
+  .productContent h3 {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .product-images img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+
+  input {
+    display: none;
+  }
+}
